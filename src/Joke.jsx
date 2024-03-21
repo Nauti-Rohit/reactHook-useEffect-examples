@@ -15,7 +15,6 @@ export default function Joke() {
     async function getFirstJoke() {
       let response = await fetch(URL);
       let jsonResponse = await response.json();
-      console.log(jsonResponse);
       setJoke({ setup: jsonResponse.setup, punchline: jsonResponse.punchline });
     }
     getFirstJoke();
